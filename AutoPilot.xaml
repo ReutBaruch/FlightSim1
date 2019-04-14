@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WpfApp3.Views.AutoPilot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer Margin="0,0,0.667,10">
+            <StackPanel>
+                <TextBox x:Name="Script" Height="300" Text="{Binding Data, UpdateSourceTrigger=PropertyChanged}" Background="{Binding Draw, UpdateSourceTrigger=PropertyChanged}" />
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Content="OK" Margin="10" Command="{Binding OkCommand}"/>
+                    <Button Content="Clear" Margin="10"/>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
